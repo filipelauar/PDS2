@@ -17,11 +17,14 @@ int main() {
     Pessoa *p1 = new Pessoa("Daniel Quirino", "Rua João Fernandes", "10/05/1997", true, true , 13494658609);
     Pessoa *p2 = new Pessoa("Filipe Lauar", "Avenida Miguel Perrela", "20/02/1996", true, false , 13879076564);
     Pessoa *p3 = new Pessoa("Pedro Vieira", "Rua Fernando de Albuquerque", "08/09/1994", false, false , 11568905407);
+    Pessoa *p4 = new Pessoa("Lucas Mello ", "Rua Boaventura", "16/04/1993", true, true , 12386094806);
 
     CadastroPessoa *cp = new CadastroPessoa();
     cp->create(*p1);
     cp->create(*p2);
     cp->create(*p3);
+    cp->create(*p4);
+
 
     cp->listarUsuarios();
     cout << " ----------------------------------------------------------- " << endl;
