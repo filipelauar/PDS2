@@ -8,10 +8,10 @@ class Cadastro
 {
 public:
     Cadastro(){}
-        create();
-        update();
-        deleted ();
-        listarObjetos();
+        void create();
+        void update();
+        void deleted ();
+        void listarObjetos();
 
     protected:
 

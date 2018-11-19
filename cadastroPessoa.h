@@ -15,10 +15,10 @@ class CadastroPessoa : Cadastro {
 public:
     CadastroPessoa(){}
 
-    void create(Pessoa &p);
-    void update();
-    void deleted(Pessoa &p);
-    void listarUsuarios();
+    create(Pessoa &p);
+    update();
+    deleted(Pessoa &p);
+    listarUsuarios();
     vector<Pessoa*> listaDeUsuarios;
 
 
@@ -29,13 +29,13 @@ public:
 
 };
 
-    void CadastroPessoa::create(Pessoa &p){
+    CadastroPessoa::create(Pessoa &p){
 
         listaDeUsuarios.push_back(&p);
 
     }
 
-    void CadastroPessoa::deleted(Pessoa &p) {
+    CadastroPessoa::deleted(Pessoa &p) {
         if (find(listaDeUsuarios.begin(), listaDeUsuarios.end(), &p) != listaDeUsuarios.end()){
 
             vector<Pessoa*>::iterator itV;
@@ -50,7 +50,7 @@ public:
         }
     }
 
-    void CadastroPessoa::listarUsuarios() {
+    CadastroPessoa::listarUsuarios() {
         vector<Pessoa*> :: iterator itV;
         for(itV = listaDeUsuarios.begin(); itV != listaDeUsuarios.end(); ++itV) {
 
