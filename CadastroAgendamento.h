@@ -47,7 +47,7 @@ public:
 
             }
         } else {
-            cout << "Usuário nao Cadastrado" << endl;
+            cout << "Agendamento nao Cadastrado" << endl;
         }
     }
 
