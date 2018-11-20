@@ -16,9 +16,9 @@ public:
     CadastroPessoa(){}
 
     create(Pessoa &p);
-    update();
+    update(Pessoa &p, string _nome, string _endereco, string _dataDeNascimento, bool _isPessoaFisica, bool _isDoador, double _cpfCnpj);
     deleted(Pessoa &p);
-    listarUsuarios();
+    void listarUsuarios();
     vector<Pessoa*> listaDeUsuarios;
 
 
@@ -50,13 +50,30 @@ public:
         }
     }
 
-    CadastroPessoa::listarUsuarios() {
+    void CadastroPessoa::listarUsuarios() {
         vector<Pessoa*> :: iterator itV;
         for(itV = listaDeUsuarios.begin(); itV != listaDeUsuarios.end(); ++itV) {
 
             cout<< (*itV)->getNome() <<endl;
         }
 
+    }
+
+    CadastroPessoa::update(Pessoa &p, string _nome, string _endereco, string _dataDeNascimento, bool _isPessoaFisica, bool _isDoador, double _cpfCnpj) {
+        if (find(listaDeUsuarios.begin(), listaDeUsuarios.end(), &p) != listaDeUsuarios.end()){
+
+            vector<Pessoa*>::iterator itV;
+            for(itV = listaDeUsuarios.begin(); itV != listaDeUsuarios.end(); ++itV) {
+                if ((*itV)->getCpfCnpj() == p.getCpfCnpj()){
+                    (*itV)->setNome(_nome);
+                    (*itV)->setEndereco(_endereco);
+                    (*itV)->setDataDeNascimento(_dataDeNascimento);
+                    (*itV)->setCpfCnpj(_cpfCnpj);
+                    (*itV)->setIsPessoaFisica(_isPessoaFisica);
+                    (*itV)->setIsDoador(_isDoador);
+                }
+            }
+        }
     }
 
 #endif // CADASTROPESSOA_H_INCLUDED
