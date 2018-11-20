@@ -11,6 +11,7 @@
 #include "PontoDeColeta.h"
 #include "Agendamento.h"
 #include "CadastroAgendamento.h"
+#include "Residuo.h"
 
 using namespace std;
 
@@ -46,5 +47,9 @@ int main() {
     cadAgen->create(*ag2);
     cadAgen->listarAgendamentos();
     cout << "----------------------------------------------------------- " << endl;
+
+    Residuo *res = new Residuo(true, "vidro", "O vidro nao deve ser descartado sem uma protecao adequada");
+    cout << "Descricao: " << res->getDescricao() << endl;
+
 
 }
