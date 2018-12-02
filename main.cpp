@@ -9,6 +9,7 @@
 #include "pessoa.cpp"
 #include "cadastro.h"
 #include "cadastroPessoa.h"
+#include "cadastroPessoa.cpp"
 #include "PontoDeColeta.h"
 #include "pontoDeColeta.cpp"
 #include "Agendamento.h"
