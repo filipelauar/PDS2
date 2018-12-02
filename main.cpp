@@ -11,6 +11,7 @@
 #include "cadastroPessoa.h"
 #include "PontoDeColeta.h"
 #include "Agendamento.h"
+#include "agendamento.cpp"
 #include "CadastroAgendamento.h"
 #include "Residuo.h"
 
