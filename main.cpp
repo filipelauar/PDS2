@@ -14,6 +14,7 @@
 #include "Agendamento.h"
 #include "agendamento.cpp"
 #include "CadastroAgendamento.h"
+#include "cadastroAgendamento.cpp"
 #include "Residuo.h"
 #include "residuo.cpp"
 

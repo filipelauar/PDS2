@@ -16,9 +16,9 @@ class CadastroAgendamento : Cadastro {
 public:
     CadastroAgendamento(){}
 
-    create(Agendamento &p);
-    update();
-    deleted(Agendamento &p);
+    void create(Agendamento &p);
+    void update();
+    void deleted(Agendamento &p);
     void listarAgendamentos();
     vector<Agendamento*> listaDeAgendamentos;
 
@@ -27,38 +27,8 @@ public:
 
     private:
 
-
 };
 
-    CadastroAgendamento::create(Agendamento &p){
-
-        listaDeAgendamentos.push_back(&p);
-
-    }
-
-    CadastroAgendamento::deleted(Agendamento &p) {
-        if (find(listaDeAgendamentos.begin(), listaDeAgendamentos.end(), &p) != listaDeAgendamentos.end()){
-
-            vector<Agendamento*>::iterator itV;
-            for(itV = listaDeAgendamentos.begin(); itV != listaDeAgendamentos.end(); ++itV) {
-                if ((*itV)->getData() == p.getData()){
-                    listaDeAgendamentos.erase(itV);
-                }
-
-            }
-        } else {
-            cout << "Agendamento nao Cadastrado" << endl;
-        }
-    }
-
-    void CadastroAgendamento::listarAgendamentos() {
-        vector<Agendamento*> :: iterator itV;
-        for(itV = listaDeAgendamentos.begin(); itV != listaDeAgendamentos.end(); ++itV) {
-
-            cout<< (*itV)->getData() <<endl;
-        }
-
-    }
 
 
 #endif // CADASTROAGENDAMENTO_H_INCLUDED
