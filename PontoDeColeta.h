@@ -8,22 +8,17 @@ using namespace std;
 
 class PontoDeColeta
 {
-public:
-    PontoDeColeta( string _rua, string _bairro, int _numero, string _complemento){
-        rua = _rua;
-        bairro = _bairro;
-        numero = _numero;
-        complemento = _complemento;
-    };
-    string getRua(){return rua;}
-    string getBairro(){return bairro;}
-    int getNumero(){return numero;}
-    string getComplemento(){return complemento;}
+    public:
+        PontoDeColeta( string _rua, string _bairro, int _numero, string _complemento);
+        string getRua();
+        string getBairro();
+        int getNumero();
+        string getComplemento();
 
-    void setRua(string _rua) { rua = _rua;}
-    void setBairro(string _bairro) { bairro = _bairro;}
-    void setNumero(int _numero) { numero = _numero;}
-    void setComplemento(string _complemento) { complemento = _complemento;}
+    void setRua(string _rua);
+    void setBairro(string _bairro);
+    void setNumero(int _numero);
+    void setComplemento(string _complemento);
 
     protected:
 
