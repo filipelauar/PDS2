@@ -14,6 +14,7 @@
 #include "agendamento.cpp"
 #include "CadastroAgendamento.h"
 #include "Residuo.h"
+#include "residuo.cpp"
 
 using namespace std;
 
