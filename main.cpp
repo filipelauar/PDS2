@@ -6,6 +6,7 @@
 #include <vector>
 #include "Agendamento.h"
 #include "pessoa.h"
+#include "pessoa.cpp"
 #include "cadastro.h"
 #include "cadastroPessoa.h"
 #include "PontoDeColeta.h"
