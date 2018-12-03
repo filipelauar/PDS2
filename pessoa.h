@@ -11,6 +11,8 @@ class Pessoa
     public:
         Pessoa(string _nome, string _endereco, string _dataDeNascimento, bool _isPessoaFisica, bool _isDoador,double _cpfCnpj);
         //virtual ~pessoa();
+    
+        string verificarData(string _data);
 
         void setNome(string _nome);
         void setEndereco(string _endereco);
